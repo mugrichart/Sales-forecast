@@ -13,6 +13,8 @@ const Main = ( { week, setWeek }) => {
 
   const [predicted , setPredicted ] = useState(false)
 
+  const baseUrl = import.meta.env.VITE_API_URL
+
   useEffect(() => {
     if (Object.keys(state).length > 0) {
         if (!predicted) handlePredict(state).then(() => handleNextWeek())
@@ -23,7 +25,7 @@ const Main = ( { week, setWeek }) => {
 
   
   useEffect(() => {
-      axios.get('http://localhost:5000/first_week')
+      axios.get(`${baseUrl}/first_week`)
           .then(response => {
             console.log(response.data)
             const { state, past_sales, future_sales } = response.data;
@@ -37,7 +39,7 @@ const Main = ( { week, setWeek }) => {
   }, []);
 
   const handleNextWeek = async () => {
-      axios.post('http://localhost:5000/next_week', {week})
+      axios.post(`${baseUrl}/next_week`, {week})
           .then(response => {
               console.log(response.data)
               const { state } = response.data;
@@ -54,7 +56,7 @@ const Main = ( { week, setWeek }) => {
         const sendState = {...state};
         Object.entries(state).forEach(([k, v]) => sendState[k] = v.current_state)
 
-      axios.post('http://localhost:5000/predict', {week , state: sendState})
+      axios.post(`${baseUrl}/predict`, {week , state: sendState})
           .then(response => {
             console.log(response.data)
             const { future_sales } = response.data;

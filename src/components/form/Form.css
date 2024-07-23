@@ -1,0 +1,20 @@
+
+form .ranges {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form .input {
+    background: rgba(10, 55, 81, 0.5);
+    border-radius: 5px;
+    color: rgb(127, 158, 183);
+    margin: .5em;
+    height: 10%;
+    width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+form .input > * {
+    margin: 5px 1em;
+}

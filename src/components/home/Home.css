@@ -1,0 +1,25 @@
+.Home {
+    background-color: #a0a0a0;
+    padding: 1em 4em;
+}
+
+h1, h2, h3, li {
+    margin: .2em;
+}
+
+p {
+    margin: 1em;
+}
+
+ul {
+    margin: 1em;
+}
+
+li {margin-inline: 2em;}
+
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

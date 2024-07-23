@@ -1,0 +1,52 @@
+
+.Prediction {
+    min-height: 100vh;
+    padding-inline: 1em;
+    background: linear-gradient(to bottom right, black, rgba(19, 19, 78, 0.763));
+    /* position: relative; */
+}
+
+/* form {
+    position: absolute;
+    opacity: .0;
+}
+
+form:hover {
+    opacity: 1;
+}
+
+.chart-container:hover{
+    opacity: .1;
+} */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-inline-end: 7em;
+}
+
+
+h1.description {
+    padding: .2em;
+    cursor:'pointer'; 
+    text-decoration : none;
+    color: lightblue;
+    cursor: pointer;
+}
+
+p span {
+    color: green;
+    text-shadow: 0 0 5px yellow;
+    cursor: pointer;
+}
+
+p span:first-child:hover {
+    text-shadow: 0 0 5px white;
+    margin-right: 5px;
+}
+
+p span:last-child:hover {
+    text-shadow: 0 0 5px white;
+    margin-left: 5px;
+}

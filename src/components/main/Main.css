@@ -1,0 +1,14 @@
+
+
+main label {
+    color: white;
+}
+
+main > .chart-container {
+    margin: 2em;
+    width: 900px;
+}
+
+main p {
+    color: white;
+}

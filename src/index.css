@@ -1,0 +1,36 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  background-color: black;
+  max-height: 100vh;
+  /* width: fit-content; */
+}
+
+* {
+  padding: 0; margin: 0; box-sizing: border-box;
+}
+
+button.start-button, input.start-button {
+  border: none;
+  margin: 1em;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 1.5em 2em;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+

@@ -28,4 +28,5 @@
     "vite": "^5.3.4"
   }, 
   "proxy": "https://sales-forecast-server.onrender.com"
+  "proxy": " https://b3d8-102-176-65-60.ngrok-free.app"
 }

@@ -8,18 +8,22 @@ import './Main.css'
 
 const Main = ( { week, setWeek }) => {
   const [state, setState] = useState({});
-  const [futureSales, setFutureSales] = useState([4, 5, 5, 6]);
-  const [pastSales, setPastSales] = useState([0, 1, 2, 3]);
+  const [futureSales, setFutureSales] = useState([]);
+  const [pastSales, setPastSales] = useState([]);
 
   const [predicted , setPredicted ] = useState(false)
 
   const baseUrl = import.meta.env.VITE_API_URL
 
   useEffect(() => {
-    if (Object.keys(state).length > 0) {
+    const handleWeek = async () => {
+      if (Object.keys(state).length > 0) {
         if (!predicted) handlePredict(state).then(() => handleNextWeek())
         else handleNextWeek() 
+      }
     }
+
+    handleWeek()
    
   }, [week])
 
